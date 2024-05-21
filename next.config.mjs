@@ -1,25 +1,41 @@
-import createMDX from '@next/mdx';
-/** 
- * @description Next.js configuration 
- * @type {import('next').NextConfig} 
- * */
+const path = require("path");
+const ghPages = process.env.DEPLOY_TARGET === "gh-pages";
 
+const withPlugins = require("next-compose-plugins");
+const MDX = require("@next/mdx");
 
-
-const withMDX = createMDX({
-    extension: /\.mdx?$/,
-    options: {
-        remarkPlugins: [],
-        rehypePlugins: [],
-    }
-})
-
+// next.js configuration
 const nextConfig = {
-    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-    experimental: {
-        appDir: true,
-        mdxRs: true
+  webpack5: false,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.node = {
+        fs: "empty",
+      };
     }
+    config.resolve.alias.images = path.join(__dirname, "images");
+    return config;
+  },
+  pageExtensions: ["js", "jsx", "md", "mdx"],
+  target: "serverless",
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/about": { page: "/about" },
+    };
+  },
+  basePath: ghPages ? "/farunurisonmez.github.io/" : "",
+  assetPrefix: ghPages ? "/farunurisonmez.github.io/" : "",
 };
 
-export default withMDX(nextConfig);
+module.exports = withPlugins(
+  [
+    [
+      MDX,
+      {
+        extension: /\.mdx?$/,
+      },
+    ],
+  ],
+  nextConfig
+);
