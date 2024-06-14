@@ -1,6 +1,4 @@
-import nextra from "nextra";
-
-const withNextra = nextra({
+const withNextra = require("nextra")({
   theme: "nextra-theme-docs",
   themeConfig: "./theme.config.tsx",
   latex: true,
@@ -15,6 +13,7 @@ const nextraConfig = withNextra({
     domains: ["www.codedeployingsquad.tech", "media.licdn.com", "github.com"],
     unoptimized: true, // Disable image optimization
   },
+  output: "export",
   reactStrictMode: true,
   eslint: {
     // ESLint behaves weirdly in this monorepo.
@@ -48,15 +47,8 @@ const nextraConfig = withNextra({
   },
 });
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  reactStrictMode: true,
-};
 
-const mergedConfig = {
+module.exports = {
+  ...withNextra(),
   ...nextraConfig,
-  ...nextConfig,
 };
-
-export default mergedConfig;
