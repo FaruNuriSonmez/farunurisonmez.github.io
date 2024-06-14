@@ -28,7 +28,9 @@ export function ShowcaseHeader() {
   {
     FIRE_WORKS.map((work) => (
     <Cards>
-     
+      <ShowcaseCard title={work.title} href={work.href} >
+        <Image src={work.img} width={500} height={500} />
+      </ShowcaseCard>
     </Cards> 
     ))
   }
@@ -41,7 +43,9 @@ export function ShowcaseHeader() {
   {
     WORKS.map((work) => (
     <Cards>
-    
+      <ShowcaseCard title={work.title} href={work.href} >
+        <Image src={work.img} width={500} height={500} />
+      </ShowcaseCard>
     </Cards> 
     ))
   }
@@ -53,7 +57,9 @@ export function ShowcaseHeader() {
   {
     COLLABORATIONS.map((work) => (
     <Cards>
-    
+      <ShowcaseCard title={work.title} href={work.href} >
+        <Image src={work.img} width={500} height={500} />
+      </ShowcaseCard>
     </Cards> 
    ))
   }

@@ -15,8 +15,16 @@ import { useState } from 'react'
 import docsCardDark from '../public/assets/card-1.dark.png'
 import docsCard from '../public/assets/card-1.png'
 import styles from './index.module.css'
+import {CTA} from "@/components/CTA";
 
 <div className="home-content">
+  <div className="flex justify-center items-center flex-col">
+    <Link href="https://x.com/bettercallgopal" className="sm:mt-[50px] mt-[30px]">
+      <span className="inline-flex items-center rounded-full bg-gray-500/10 dark:bg-gray-700 px-5 py-2 text-xs font-medium ring-1 ring-inset dark:ring-gray-400/30 ring-gray-500/50 font-anton dark:text-white gap-x-1 text-gray-500 "><RiTwitterXLine />@bettercallgopal</span>
+    </Link>
+    <h1 className="headline font-anton text-center mb-[50px]">BUILDING SOMETHING <br /> PEOPLE WANT</h1>
+    <CTA />
+  </div>
   <style jsx>{`
     .content-container {
       max-width: 90rem;
@@ -108,8 +116,8 @@ import styles from './index.module.css'
     }
     :global(.dark #highlighting-card-blog) {
       min-height: 300px;
-      background-image: linear-gradient(to top, transparent, #202020 50%), url(/assets/index_blog.jpg);
-      background-size: 334px;
+      background-image: linear-gradient(to top, transparent, #202020 50%), url(/assets/index_blog.png);
+      background-size: 634px;
       background-position: -6px calc(100% + 0px);
       background-repeat: no-repeat;
     }
@@ -241,6 +249,12 @@ import styles from './index.module.css'
   <div className="features-container">
     <div className="content-container">
       <Features>
+        <Feature index={1} large centered id="docs-card" href="https://github.com/GopalVerma1303/dotconfigs">
+          <Image src={Nvimss} alt="Background" loading="eager" />
+          <Image src={Nvimss} alt="Background (Dark)" loading="eager" />
+          <h3>Get my Neovim + other dotfiles <br className="show-on-mobile"/>configurations</h3>
+        </Feature>
+       
         <Feature index={2} id="highlighting-card" href="/notebooks/web">
           <h3>Notebooks</h3>
           <p>Discover code snippets and detailed analyses in my notebooks, designed to help developers solve real-world problems efficiently.</p>
@@ -253,7 +267,91 @@ import styles from './index.module.css'
           <h3>Showcase</h3>
           <p>Explore my showcased projects, each demonstrating my skills and creativity.</p>
         </Feature>
-        
+        <Feature index={5} centered className="feat-darkmode" style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+          <motion.div
+            animate={{
+              backgroundPosition: ['0% 0%', '50% 40%', '50% 40%', '100% 100%'],
+              backgroundImage: [`radial-gradient(farthest-corner, #e2e5ea, #e2e5ea)`, 'radial-gradient(farthest-corner, #06080a, #e2e5ea)', 'radial-gradient(farthest-corner, #06080a, #e2e5ea)', 'radial-gradient(farthest-corner, #e2e5ea, #e2e5ea)'],
+            }}
+            transition={{
+              backgroundPosition: {
+                repeat: Infinity,
+                duration: 10,
+                delay: 1
+              },
+              backgroundImage: {
+                times: [0, .2, .8, 1],
+                repeat: Infinity,
+                duration: 10,
+                delay: 1
+              },
+            }}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundImage: `radial-gradient(farthest-corner, #06080a, #e2e5ea)`,
+              backgroundSize: '400% 400%',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+          <motion.h3
+            animate={{
+              color: ['#dae5ff', '#fff', '#fff', '#dae5ff'],
+            }}
+            style={{
+              position: 'relative',
+              mixBlendMode: 'difference',
+            }}
+          >Dark and<br/>light themes <br/>included</motion.h3>
+        </Feature>
+        <Feature index={6} large id="search-card" >
+          <div style={{ zIndex: 2}}>
+            <h3>Full-text search <br/> throughout the site</h3>
+            <p>You can search through my notebooks, blogs, and showcases effortlessly using the search bar.</p>
+          </div>
+          <div className="absolute w-full h-full inset-0 hidden sm:block bg-[linear-gradient(to_right,white_250px,_transparent)] dark:bg-[linear-gradient(to_right,#202020_250px,_transparent)] z-[1]"/>
+          <video autoPlay="autoplay" loop muted playsInline className="dark:hidden block">
+            <source src="/assets/search.mp4" type="video/mp4"/>
+          </video>
+          <video autoPlay="autoplay" loop muted playsInline className="dark:block hidden -translate-x-4">
+            <source src="/assets/search-dark.mp4" type="video/mp4"/>
+          </video>
+        </Feature>
+        <Feature index={7} large id="fs-card" style={{
+          color: 'white',
+          backgroundImage: 'url(/assets/routing.png), url(/assets/gradient-bg.jpeg)',
+          backgroundSize: '140%, 180%',
+          backgroundPosition: '130px -8px, top',
+          backgroundRepeat: 'no-repeat',
+          textShadow: '0 1px 6px rgb(38 59 82 / 18%)',
+          aspectRatio: '1.765',
+        }}>
+          <h3>I do open-source projects, and freelance work, <br /> <Link href="https://github.com/gopalVerma1303/">visit my github</Link> or <Link href="#">book a call</Link></h3>
+        </Feature>
+        <Feature index={8} id="a11y-card" href="https://drive.google.com/file/d/1seko5lEQP5iuB-GKXt4x83d0IqnEGE3t/view?usp=sharing" className='card-with-border' style={{
+          backgroundSize: 750,
+          backgroundRepeat: 'no-repeat',
+          minHeight: 288
+        }}>
+          <h3>Hiring or looking for a teammate?</h3>
+          <p>Here is the link to my resume, detailing all my experience, skills, and achievements.</p>
+        </Feature>
+        <Feature index={9}>
+          <h3>Interested in the technical details?</h3>
+          <p className='mr-6'>Check out the GitHub repository for this site to explore the code and see how everything is built. Here’s the link to the <Link href="https://github.com/GopalVerma1303/bettercallgopal">GitHub page</Link>.</p>
+        </Feature>
+        <Feature index={10} large>
+          <h3>Know more...</h3>
+          <p>Discover more about my work, experience, and expertise on the <Link href="/about">About</Link> page. <br /> Dive deeper into my professional journey and see how my skills can benefit your projects.</p>
+          <p className="subtitle"><Link className="!no-underline" href="/notebooks/web">Start with Notebooks →</Link></p>
+        </Feature>
       </Features>
     </div>
   </div>

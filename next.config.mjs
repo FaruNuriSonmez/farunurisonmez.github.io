@@ -13,6 +13,7 @@ const withNextra = nextra({
 const nextraConfig = withNextra({
   images: {
     domains: ["www.codedeployingsquad.tech", "media.licdn.com", "github.com"],
+    unoptimized: true, // Disable image optimization
   },
   reactStrictMode: true,
   eslint: {
