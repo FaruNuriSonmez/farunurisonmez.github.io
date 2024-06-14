@@ -10,7 +10,7 @@ const withNextra = nextra({
   defaultShowCopyCode: true,
 });
 
-export default withNextra({
+const nextraConfig = withNextra({
   images: {
     domains: ["www.codedeployingsquad.tech", "media.licdn.com", "github.com"],
   },
@@ -46,3 +46,16 @@ export default withNextra({
     return config;
   },
 });
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  reactStrictMode: true,
+};
+
+const mergedConfig = {
+  ...nextraConfig,
+  ...nextConfig,
+};
+
+export default mergedConfig;
