@@ -9,25 +9,25 @@
   },
   "notebooks": {
     "type": "page",
-    "title": "Notebooks"
+    "title": "Geliştirme Notları"
   },
   "blogs": {
     "type": "page",
-    "title": "Blogs",
+    "title": "Teknoloji Günlükleri",
     "theme": {
       "typesetting": "article"
     }
   },
   "showcase": {
     "type": "page",
-    "title": "Showcase",
+    "title": "Portföy",
     "theme": {
       "typesetting": "article"
     }
   },
   "about": {
     "type": "page",
-    "title": "About",
+    "title": "Hakkımda",
     "theme": {
       "typesetting": "article"
     }

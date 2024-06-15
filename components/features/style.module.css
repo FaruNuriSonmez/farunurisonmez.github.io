@@ -4,7 +4,7 @@
   color: #000;
   background-color: white;
   overflow: hidden;
-  border-radius: 1.78em;
+  border-radius: 1em;
 }
 .feature.large {
   grid-column: span 2;
@@ -14,12 +14,19 @@
 }
 .feature h3 {
   position: relative;
-  font-size: 34px;
-  font-size: min(34px, max(4vw, 24px));
-  font-weight: 600;
-  line-height: 1.25;
+  font-size: 24px;
+  font-size: min(18px, max(4vw, 24px));
+  font-weight: 700;
+  line-height: 1.5;
   letter-spacing: -0.02rem;
   z-index: 2;
+}
+.feature p {
+  margin-top: 1.5rem;
+  font-size: 12px;
+  font-size: min(12px, max(4vw, 16px));
+  line-height: 1.6;
+  font-weight: 400;
 }
 :global(.dark) .feature:not(.light-only) {
   color: #fff;
@@ -32,6 +39,8 @@
     0 0 0 1px rgb(0 0 0 / 3%);
   transition: box-shadow 0.3s ease;
 }
+
+
 :global(.dark) .feature {
   box-shadow: 0 0 0 1px rgb(82 82 82 / 60%);
 }
@@ -61,6 +70,7 @@
   }
   .feature:hover .link {
     opacity: 1;
+    
   }
   .feature .link:hover {
     transform: scale(1.05);
@@ -83,7 +93,7 @@
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2em;
+  grid-gap: 6em;
   font-feature-settings: initial;
 }
 

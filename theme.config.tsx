@@ -3,14 +3,14 @@ import type { DocsThemeConfig } from "nextra-theme-docs";
 import { useConfig } from "nextra-theme-docs";
 import Image from "next/image";
 import { GitHubIcon, TwitterXIcon, DiscordIcon } from "@/components/icons";
-import SOCIAL_MEDIA_LINKS from "@/content/social-media";
+import SOCIAL_MEDIA_LINKS from "@/content/socialMedia";
 import LOGO_FOR_DARK from "@/public/personal/full-white-bg-trans.png";
 import LOGO_FOR_LIGHT from "@/public/personal/full-black-bg-trans.png";
 import Logo from "@/components/Logo";
 
 const logo = (
   <>
-    <Logo name="@bettercallgopal" initials="GV" />
+    <Logo name="@farunurisonmez" initials="GV" />
   </>
 );
 
@@ -110,35 +110,10 @@ const config: DocsThemeConfig = {
   footer: {
     text: (
       <div className="flex w-full flex-col items-center">
-        <div>
-          <a
-            className="flex items-center gap-1 text-current"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="vercel.com homepage"
-            href="https://vercel.com/vgopaldps1gmailcoms-projects?utm_source=bettercallgopal.vercel.app"
-          >
-            <Image
-              className="dark:hidden opacity-70"
-              src={LOGO_FOR_LIGHT}
-              height={200}
-              width={200}
-              alt="@bettercallgopal"
-            />
-            <Image
-              className="hidden dark:block opacity-70"
-              src={LOGO_FOR_DARK}
-              height={200}
-              width={200}
-              alt="@bettercallgopal"
-            />
-          </a>
-        </div>
         <div className="flex mt-5 text-xs flex-col justify-center items-center gap-2">
           <p>
-            Build with ♥ by <span className="font-bold">Gopal Verma</span>
+            Build with by <span className="font-bold">Faru Nuri Sönmez</span>
           </p>
-          <p>𐄷 MIT License</p>
         </div>
       </div>
     ),

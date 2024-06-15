@@ -3,23 +3,25 @@
     "type": "separator",
     "title": "Notebooks"
   },
-  "web": "Web Development",
-  "mobile": "Mobile Development",
-  "misc": "Miscellaneous",
+  "web": "Web Geliştirme",
+  "mobile": "Mobile Geliştirme",
+  "blockchain": "Blok Zinciri Geliştirme",
+  "qa": "Yazılım Testi Geliştirme",
+  "devops": "DevOps Geliştirme",
   "-- More": {
     "type": "separator",
     "title": "More"
   },
   "blog-link": {
-    "title": "Blogs ↗",
+    "title": "Teknoloji Günlükleri ↗",
     "href": "/blogs"
   },
   "showcase-link": {
-    "title": "Showcase ↗",
+    "title": "Portföy ↗",
     "href": "/showcase"
   },
   "about-link": {
-    "title": "About ↗",
+    "title": "Hakkımda ↗",
     "href": "/about"
   }
 }

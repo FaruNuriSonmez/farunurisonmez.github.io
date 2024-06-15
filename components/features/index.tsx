@@ -45,7 +45,7 @@ export function Feature({
         <Link
           className={styles.link}
           href={href}
-          target="_blank"
+          target="_parent"
           rel="noopener noreferrer"
         >
           <ArrowRightIcon width="1.5em" />
@@ -60,5 +60,9 @@ interface FeaturesProps {
 }
 
 export function Features({ children }: FeaturesProps) {
-  return <div className={styles.features}>{children}</div>;
+  return (
+    <div className={styles.features}>
+        {children}
+    </div>
+  )
 }
