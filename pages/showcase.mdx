@@ -4,17 +4,17 @@ description: Project Gallery - A curated showcase of my works 📺
 ---
 
 import { Cards } from 'nextra/components'
-import {WORKS, COLLABORATIONS, FIRE_WORKS} from '@/content/showcase'
+import { WORKS, PROJECTS, LAST_WORKS } from '@/content/showcase'
 import Image from 'next/image'
 
 export function ShowcaseHeader() {
   return (
     <div className="max-w-screen-lg mx-auto pt-4 pb-8 mb-16 border-b border-gray-400 border-opacity-20">
       <h1>
-        <span className="font-bold leading-tight lg:text-5xl">Showcase</span>
+        <span className="font-bold leading-tight lg:text-5xl">Portföy</span>
       </h1>
       <p className="italic text-center text-gray-500 dark:text-gray-400 font-space-grotesk">
-        Explore my showcased projects, each demonstrating my skills and creativity.
+        Her biri becerilerimi ve yaratıcılığımı gösteren sergilenen projelerimi keşfedin.
       </p>
     </div>
   )
@@ -22,11 +22,11 @@ export function ShowcaseHeader() {
 
 <ShowcaseHeader />
 
-<p className="text-xl font-bold mb-4">🔥 Works</p>
+<p className="text-xl font-bold mb-4"></p>
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 border-b border-gray-400 border-opacity-20 mb-16 pb-8">
   {
-    FIRE_WORKS.map((work) => (
+    LAST_WORKS.map((work) => (
     <Cards>
       <ShowcaseCard title={work.title} href={work.href} >
         <Image src={work.img} width={500} height={500} />
@@ -37,7 +37,7 @@ export function ShowcaseHeader() {
 </div>
 
 
-<p className="text-xl font-bold mb-4">Works</p>
+<p className="text-xl font-bold mb-4">İşlerim</p>
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 border-b border-gray-400 border-opacity-20 mb-16 pb-8">
   {
@@ -51,11 +51,11 @@ export function ShowcaseHeader() {
   }
 </div>
 
-<p className="text-xl font-bold mb-4">Collaborations</p>
+<p className="text-xl font-bold mb-4">Projelerim</p>
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 border-b border-gray-400 border-opacity-20 mb-16 pb-8">
   {
-    COLLABORATIONS.map((work) => (
+    PROJECTS.map((work) => (
     <Cards>
       <ShowcaseCard title={work.title} href={work.href} >
         <Image src={work.img} width={500} height={500} />

@@ -1,98 +1,116 @@
-import { title } from "process";
-
 export type ShowcaseItem = {
   title: string;
   href: string;
   img: string;
 };
 
-const FIRE_WORKS: any[] = [
+const LAST_WORKS: any[] = [
   {
-    title: "My Devsite",
-    href: "https://github.com/GopalVerma1303/bettercallgopal",
-    img: "/showcase/bcg.png",
+    title: "ABC Lojistik CMS ve GIS Uygulamaları",
+    href: "",
+    img: "/showcase/bookingApp.webp",
   },
   {
-    title: "Kitchensink RNR",
-    href: "https://github.com/GopalVerma1303/KitchenSinkRNR",
-    img: "/showcase/kitchensinkrnr.png",
+    title: "SugAR Teknoloji Hızlı Render Uygulaması",
+    href: "",
+    img: "/showcase/rapidRenderApp.webp",
   },
   {
-    title: "SquadBook",
-    href: "https:github.com/CodeDeployingSquad/SquadBook",
-    img: "/showcase/squadbook.png",
+    title: "Bare Kripto Merkezi Olmayan NFT Pazar Yeri Uygulaması",
+    href: "",
+    img: "/showcase/bookingApp.webp",
   },
 ];
 
 const WORKS: any[] = [
   {
-    title: "My Dotfiles",
-    href: "https://github.com/GopalVerma1303/dotfiles",
-    img: "/showcase/dotfiles.png",
+    title: "DFDS Rezervasyon Mikro Uygulaması",
+    href: "",
+    img: "/showcase/bookingApp.webp",
   },
   {
-    title: "CDS Website",
-    href: "https://github.com/CodeDeployingSquad/WWW",
-    img: "/showcase/cds.png",
+    title: "ABC Lojistik Operasyon Takip Sistemi Mikro Uygulaması",
+    href: "",
+    img: "/showcase/otsApp.webp",
   },
   {
-    title: "Old Devsite",
-    href: "https://github.com/GopalVerma1303/portfolio",
-    img: "/showcase/old-devsite.png",
+    title: "ABC Lojistik Bekleyen Araçlar Yönetim Sistemi Mikro Uygulaması",
+    href: "",
+    img: "/showcase/otsApp.webp",
   },
   {
-    title: "GitHub Repo Tree Generator",
-    href: "https://github.com/GopalVerma1303/github-repo-tree-generator",
-    img: "/showcase/github-repo-tree.png",
+    title: "ABC Lojistik Depo Yönetim Sistemi Mikro Uygulaması",
+    href: "",
+    img: "/showcase/",
   },
   {
-    title: "Thirdfunding",
-    href: "https://github.com/GopalVerma1303/thirdfunding",
-    img: "/showcase/thirdfunding.png",
+    title: "ABC Lojistik Talep Yönetim Sistemi Mikro Uygulaması",
+    href: "",
+    img: "/showcase/",
   },
   {
-    title: "VogueGenie",
-    href: "https://github.com/GopalVerma1303/voguegenie",
-    img: "/showcase/voguegenie.png",
+    title: "Bare Kripto Merkezi Olmayan NFT Pazar Yeri Uygulaması",
+    href: "",
+    img: "/showcase/",
   },
   {
-    title: "Unite",
-    href: "https://github.com/GopalVerma1303/Stimulus-Unite",
-    img: "/showcase/unite.png",
+    title: "Bare Kripto NFT Basma Platformu",
+    href: "",
+    img: "/showcase/",
   },
   {
-    title: "Pictrovert",
-    href: "https://github.com/GopalVerma1303/pictrovert",
-    img: "/showcase/pictrovert.png",
+    title: "SugAR Teknoloji Hızlı Render Uygulaması",
+    href: "",
+    img: "/showcase/",
   },
   {
-    title: "TapTick",
-    href: "https://github.com/GopalVerma1303/taptick",
-    img: "/showcase/taptick.png",
+    title: "Lindow Labs CarpetAR Uygulaması",
+    href: "",
+    img: "/showcase/",
   },
   {
-    title: "TapTalk",
-    href: "https://github.com/GopalVerma1303/taptalk",
-    img: "/showcase/taptalk.png",
+    title: "Lindow Labs",
+    href: "",
+    img: "/showcase/",
   },
+  {
+    title: "Lindow Labs",
+    href: "",
+    img: "/showcase/",
+  },
+  {
+    title: "MULCOL Yangın Söndürme VR Simülasyon Uygulaması",
+    href: "",
+    img: "/showcase/",
+  },
+  {
+    title: "MULCOL Yangın Söndürme Ürünleri AR Uygulaması",
+    href: "",
+    img: "/showcase/",
+  },
+  {
+    title: "ALPHAN İnşaat VR Simülasyon Uygulaması",
+    href: "",
+    img: "/showcase/",
+  },
+  {
+    title: "ALPHAN İnşaat AR Simülasyon Uygulaması",
+    href: "",
+    img: "/showcase/",
+  }
 ];
 
-const COLLABORATIONS: any[] = [
+const PROJECTS: any[] = [
   {
-    title: "Gane Solutions",
+    title: "XRBow Teknolojisi",
     href: "/showcase/gane",
-    img: "/showcase/gane.png",
+    img: "/showcase/",
   },
   {
-    title: "Quillbook",
+    title: "Freight Planner App",
     href: "/showcase/quillbook",
-    img: "/showcase/quillbook.png",
-  },
-  {
-    title: "Ghai Group",
-    href: "/showcase/ghai-group",
-    img: "/showcase/ghai.png",
+    img: "/showcase/",
   },
 ];
 
-export { WORKS, COLLABORATIONS, FIRE_WORKS };
+export { WORKS, PROJECTS, LAST_WORKS };
