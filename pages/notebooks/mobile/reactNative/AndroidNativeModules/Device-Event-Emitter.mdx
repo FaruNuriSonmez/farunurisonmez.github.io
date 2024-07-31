@@ -1,0 +1,64 @@
+React Native'de `DeviceEventEmitter`, native modüllerle iletişim kurmanızı ve platformdan olayları dinlemenizi sağlayan bir API'dir. `DeviceEventEmitter`, React Native uygulamanızda olay tabanlı mimariyi uygulamanıza ve uygulama bileşenlerinizin platformdan gelen özel olayları dinlemesine olanak tanır.
+
+### DeviceEventEmitter Nedir?
+
+`DeviceEventEmitter`, Android platformunda yerleşik olan bir olay yayıcıdır ve React Native ile entegrasyon sağlar. iOS platformunda ise `RCTDeviceEventEmitter` kullanılmaktadır. `DeviceEventEmitter`, native modüllerden veya platformdan olayları dinlemek ve bunlara yanıt vermek için kullanılır.
+
+### DeviceEventEmitter Nasıl Kullanılır?
+
+`DeviceEventEmitter`'ı kullanmak için öncelikle React Native'de `DeviceEventEmitter` modülünü içe aktarmanız gerekmektedir:
+
+```typescript
+import { DeviceEventEmitter } from 'react-native';
+```
+
+`DeviceEventEmitter` ile olayları dinlemek ve işlemek için `addListener` metodunu kullanabilirsiniz. Bu metod, belirtilen olay adı ve olay işleyici fonksiyonuyla bir dinleyici oluşturur. İşte örnek bir kullanım:
+
+```typescript
+import React, { useEffect } from 'react';
+import { DeviceEventEmitter, Text, View } from 'react-native';
+
+const MyComponent: React.FC = () => {
+  useEffect(() => {
+    const subscription = DeviceEventEmitter.addListener('myCustomEvent', (eventData) => {
+      console.log('Olay verileri:', eventData);
+    });
+
+    // Bileşen kaldırıldığında dinleyiciyi kaldırın
+    return () => {
+      subscription.remove();
+    };
+  }, []);
+
+  return (
+    <View>
+      <Text>DeviceEventEmitter ile Olay Dinleyici Örneği</Text>
+    </View>
+  );
+};
+
+export default MyComponent;
+```
+
+### DeviceEventEmitter Kullanım Senaryoları
+
+`DeviceEventEmitter`, aşağıdaki senaryolarda oldukça yararlıdır:
+
+1. **Native Modüllerden Olay Yayma:**
+
+   Native kodla entegre edilen bir özelliğiniz varsa ve bu özellik belirli olayları tetikliyorsa, bu olayları `DeviceEventEmitter` ile dinleyebilirsiniz. Örneğin, bir Android servisinden veri almak veya bir sensör değişikliğini dinlemek için kullanılabilir.
+
+2. **Arka Plan İşlemleri:**
+
+   Arka planda çalışan işlemler veya hizmetler, uygulama durumunda değişiklikler veya belirli olaylar hakkında bilgi verebilir. Bu tür durumları dinlemek için `DeviceEventEmitter` kullanılabilir.
+
+3. **Cihaz Olayları:**
+
+   Donanım veya platformdan gelen belirli olayları dinlemek, örneğin pil durumu değişiklikleri, bağlantı değişiklikleri veya sistem bildirimleri gibi.
+
+### DeviceEventEmitter Kullanmanın Sınırlamaları
+
+- **Platform Bağımlılığı:** `DeviceEventEmitter` daha çok Android'e özgüdür. iOS için benzer işlevselliği elde etmek amacıyla `RCTDeviceEventEmitter` kullanılır.
+  
+- **Performans:** Çok fazla olay yaymak performansı etkileyebilir. Bu nedenle, yalnızca gerçekten gerektiğinde kullanılması önerilir.
+

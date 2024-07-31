@@ -4,7 +4,7 @@
     "theme": {
       "toc": false,
       "sidebar": false,
-      "pagination": false,
+      "pagination": true,
       "typesetting": "article"
     }
   },

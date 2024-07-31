@@ -15,7 +15,8 @@
     "type": "page",
     "title": "Teknoloji Günlükleri",
     "theme": {
-      "typesetting": "article"
+      "typesetting": "article",
+      "pagination": true
     }
   },
   "showcase": {

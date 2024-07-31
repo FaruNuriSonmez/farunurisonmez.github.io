@@ -2,12 +2,14 @@
   "name": "farunurisonmez.github.io",
   "version": "1.0.0",
   "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+
   "dependencies": {
     "@calcom/embed-react": "^1.5.0",
     "@react-three/drei": "^9.106.0",

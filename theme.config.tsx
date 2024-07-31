@@ -28,7 +28,7 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter();
     if (asPath !== "/") {
       return {
-        titleTemplate: "%s - @bettercallgopal",
+        titleTemplate: "%s - @farunurisonmez",
       };
     }
   },
