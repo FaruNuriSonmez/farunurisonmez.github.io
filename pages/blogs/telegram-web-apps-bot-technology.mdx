@@ -1,0 +1,112 @@
+---
+title: Telegram Web Uygulaması ile Bot Teknolojisi
+date: 2024/08/17
+description: Bu makalede, Telegram botlarınıza entegre edebileceğiniz Web Uygulamalarını nasıl oluşturabileceğinizi adım adım ele alıyoruz. Telegram Web Apps API'si sayesinde, botlarınızı daha interaktif ve kullanıcı dostu hale getirebilir, kullanıcılarınıza web tabanlı deneyimler sunabilirsiniz. Bu rehberde, GitHub Pages üzerinde Web Uygulamanızı barındırmaktan, Telegram üzerinden kullanıcılarınıza erişim sağlamaya kadar tüm detayları bulacaksınız. Telegram Web Uygulaması ile bot teknolojisini nasıl geliştirebileceğinizi öğrenmek ve hemen başlamanız için gerekli olan tüm teknik bilgiler ve örnekler bu makalede sizi bekliyor.
+tag: bot web apps telegram api javascript
+ogImage: /og.jpeg
+---
+
+
+## Telegram Web Apps için Botlar Örneği
+Bu belge, Telegram Web Apps API'si ile JavaScript kullanarak etkileşim kurmayı gösteren bir HTML dosyası örneğidir. Aşağıda, bu örneği nasıl oluşturacağınız ve Telegram botları ile entegre edeceğiniz adımlar detaylandırılmıştır.
+
+<div align="center">
+<iframe width="300" height="300"
+src="https://core.telegram.org/file/464001679/11aa9/KQx_BlPVXRo.4922145.mp4/c65433c8ac11a347a8" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe>
+</div>
+
+
+### Bağlantılar
+- Resmi dokümanlar: [Telegram Web Apps](https://core.telegram.org/bots/webapps)
+- Canlı Demo Botu: Attach Bot
+- Telegram Promo Bot: Durger King
+
+### Hızlı Kurulum
+
+#### 0. Web Uygulamasını GitHub Pages'de Barındırın
+Web Uygulamanızın bir yerlerde barındırılması gerekmektedir. Bunun için ücretsiz ve hızlı bir yol olarak GitHub Pages kullanılabilir:
+
+- Bir GitHub deposu oluşturun (veya bu projeyi fork'layın).
+- Depoda şu adımları izleyin: **Settings > Pages**:
+  - **Source**: Deploy from a branch
+  - **Branch**: master, / (root), Kaydet
+- Web uygulamanızın dağıtımı için birkaç dakika bekleyin. Uygulamanız şu adreste kullanılabilir olacaktır: `https://{github-kullanıcı-adı}.github.io/{depo-adı}/{depo-içi-konum}`.
+  - Örneğin: `https://revenkroz.github.io/telegram-web-app-bot-example/index.html`
+
+#### 1. Kullanıcıya Web Uygulaması Açma Butonu Gösterin
+Bunu yapmanın iki yolu vardır:
+
+##### a. Özel Menü Butonu Gösterme
+Kullanıcıya mesaj girişi alanının yanında özel bir menü butonu gösterin:
+
+- Bot Father'a gidin
+- Botunuzu seçin
+- **Bot Settings** — **Menu Button** — **Specify/Edit menu button URL** seçeneklerini izleyin
+- Web Uygulamanızın URL'sini girin (örneğin, `https://revenkroz.github.io/telegram-web-app-bot-example/index.html`)
+
+##### b. Web App URL İçeren Buton Gönderme
+Kullanıcıya bir buton göndererek, butonun `web_app` alanına Web Uygulamanızın URL'sini ekleyin:
+
+```json
+{
+    "text": "Test web_app",
+    "web_app": {
+        "url": "https://revenkroz.github.io/telegram-web-app-bot-example/index.html"
+    }
+}
+```
+
+#### 2. Web Uygulamanıza Script Ekleme
+Web Uygulamanızı Telegram istemcisine bağlamak için, `<head>` etiketinin içine şu script kodunu ekleyin (daha fazla bilgi için [Telegram dokümanlarına](https://core.telegram.org/bots/webapps#initializing-mini-apps) bakın):
+
+```html
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+```
+
+Bu script bağlandıktan sonra, `window.Telegram.WebApp` nesnesi kullanılabilir hale gelecektir. 
+
+#### 3. Telegram Web Apps API ile Entegrasyon ve Gelişmiş Özellikler
+
+Telegram Web Apps API'si, Web Uygulamanızın Telegram istemcisi ile derinlemesine entegre olmasına olanak tanır. Aşağıda bu entegrasyon için bazı anahtar noktalar yer almaktadır:
+
+##### a. Başlatma ve Veri Alma
+Telegram Web Apps API'si, uygulamanızın başlatılması sırasında kullanıcının oturum bilgilerini almanızı sağlar. Bu bilgiye şu şekilde erişebilirsiniz:
+
+```javascript
+const user = window.Telegram.WebApp.initDataUnsafe.user;
+console.log(`Kullanıcı adı: ${user.username}`);
+```
+
+Bu yapı, kullanıcının kimliği, adı, soyadı, dil tercihleri gibi bilgileri içerir. Ayrıca `initDataUnsafe` objesi, uygulamanın güvenli şekilde başlatılmasını sağlar ve kullanılacak diğer verilere erişim sağlar.
+
+##### b. Tema ve Dil Desteği
+Telegram Web Apps API, kullanıcının uygulama temasına (örneğin, karanlık veya aydınlık mod) ve dil tercihlerine göre uygulamanızı otomatik olarak uyarlamanızı sağlar:
+
+```javascript
+const themeParams = window.Telegram.WebApp.themeParams;
+const isDarkMode = themeParams.bg_color === "#000000";
+
+const lang = window.Telegram.WebApp.initDataUnsafe.user.language_code;
+console.log(`Kullanıcının dili: ${lang}`);
+```
+
+Bu parametreler, Web Uygulamanızın görünüm ve hissini kullanıcı tercihlerine göre optimize etmenizi sağlar.
+
+##### c. Genişletilmiş Fonksiyonlar
+Telegram Web Apps API ayrıca, kullanıcı etkileşimlerini kolaylaştırmak için aşağıdaki fonksiyonları sunar:
+
+- **`window.Telegram.WebApp.close()`**: Web Uygulamanızı kapatır.
+- **`window.Telegram.WebApp.expand()`**: Uygulamanızı tam ekran yapar.
+- **`window.Telegram.WebApp.onEvent(eventType, callback)`**: Belirli olay türlerini dinler (örn. tema değişikliği, boyut değişikliği).
+- **`window.Telegram.WebApp.showPopup()`**: Kullanıcıya bilgi vermek için popup gösterir.
+
+#### 4. Güvenlik ve Performans İpuçları
+Telegram Web Apps API'sini kullanırken, uygulamanızın güvenliği ve performansını artırmak için şu önerilere dikkat edebilirsiniz:
+
+- **Veri Doğrulama**: Kullanıcıdan gelen tüm verileri doğrulayın ve güvende olduğundan emin olun.
+- **Performans**: Web Uygulamanızın hızlı yüklenmesini sağlamak için gereksiz kaynakları azaltın ve yalnızca gerekli scriptleri yükleyin.
+- **CORS (Cross-Origin Resource Sharing)**: Uygulamanızın Telegram ile güvenli bir şekilde iletişim kurabilmesi için uygun CORS yapılandırmalarını uygulayın.

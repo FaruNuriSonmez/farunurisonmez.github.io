@@ -49,9 +49,9 @@ export default async function (req) {
           style={{ position: "absolute", top: 20, right: 30 }}
           height="120"
           src={
-            "https://bettercallgopal.vercel.app/personal/main-white-bg-trans.png"
+            "https://farunurisonmez.vercel.app/personal/main-white-bg-trans.png"
           }
-          alt="@bettercallgopal logo"
+          alt="@farunurisonmez logo"
         />
         <p
           style={{
@@ -63,7 +63,7 @@ export default async function (req) {
             letterSpacing: -1,
           }}
         >
-          By Gopal Verma (@bettercallgopal)
+          By Gopal Verma (@farunurisonmez)
         </p>
         <h1
           style={{

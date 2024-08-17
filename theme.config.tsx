@@ -57,22 +57,22 @@ const config: DocsThemeConfig = {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={socialCard} />
-        <meta name="twitter:site:domain" content="bettercallgopal.vercel.app" />
-        <meta name="twitter:url" content="https://bettercallgopal.vercel.app" />
+        <meta name="twitter:site:domain" content="farunurisonmez.vercel.app" />
+        <meta name="twitter:url" content="https://farunurisonmez.vercel.app" />
         <meta
           name="twitter:description"
           content={frontMatter.description ? frontMatter.description : " "}
         />
         <meta
           name="twitter:title"
-          content={title ? title + " – @bettercallgopal" : "@bettercallgopal"}
+          content={title ? title + " – @farunurisonmez" : "@farunurisonmez"}
         />
         <meta
           name="og:title"
-          content={title ? title + " – @bettercallgopal" : "@bettercallgopal"}
+          content={title ? title + " – @farunurisonmez" : "@farunurisonmez"}
         />
         <meta property="og:image" content={socialCard} />
-        <meta name="apple-mobile-web-app-title" content="@bettercallgopal" />
+        <meta name="apple-mobile-web-app-title" content="@farunurisonmez" />
         <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" type="image/png" />
         <link
@@ -110,9 +110,24 @@ const config: DocsThemeConfig = {
   footer: {
     text: (
       <div className="flex w-full flex-col items-center">
-        <div className="flex mt-5 text-xs flex-col justify-center items-center gap-2">
-          <p>
-            Build with by <span className="font-bold">Faru Nuri Sönmez</span>
+        <div
+          className="flex mt-5 text-xs flex-col justify-center items-center gap-2"
+          
+        >
+          <p
+            className="text-gray-900 dark:text-gray-400"
+          >
+            Build with by 
+            <span className="font-bold">
+              <a
+                href="https://efsoft.works"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-900 dark:text-gray-400"
+              >
+                  &#160;efsoft.works
+              </a>
+            </span>
           </p>
         </div>
       </div>

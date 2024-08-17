@@ -10,11 +10,11 @@ const SOCIAL_MEDIA_LINKS: Record<string, SocialProfile> = {
   },
   github: {
     username: "farunurisonmez",
-    link: "https://github.com/GopalVerma1303/bettercallgopal",
+    link: "https://github.com/GopalVerma1303/farunurisonmez",
   },
   github_docsRepositoryBase: {
     username: "farunurisonmez",
-    link: "https://github.com/GopalVerma1303/bettercallgopal/tree/main",
+    link: "https://github.com/GopalVerma1303/farunurisonmez/tree/main",
   },
   discord: {
     username: "farunurisonmez",
@@ -30,7 +30,7 @@ const SOCIAL_MEDIA_LINKS: Record<string, SocialProfile> = {
   },
   instagram: {
     username: "farunurisonmez",
-    link: "https://www.instagram.com/bettercallgopal/",
+    link: "https://www.instagram.com/farunurisonmez/",
   },
   linkedin: {
     username: "Faru Nuri Sönmez",

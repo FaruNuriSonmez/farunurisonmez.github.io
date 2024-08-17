@@ -29,7 +29,7 @@ const SocialBundle: React.FC = () => {
       </div>
 
       <div className="flex justify-center">
-        <Link href="https://twitter.com/bettercallgopal">
+        <Link href="https://twitter.com/farunurisonmez">
           <div className={styles.optimization}>
             <div
               className="flex items-center gap-[3px]"
@@ -40,7 +40,7 @@ const SocialBundle: React.FC = () => {
             </div>
           </div>
         </Link>
-        <Link href="https://www.instagram.com/bettercallgopal">
+        <Link href="https://www.instagram.com/farunurisonmez">
           <div className={styles.optimization}>
             <div
               className="flex items-center gap-[3px]"

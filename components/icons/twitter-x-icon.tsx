@@ -4,7 +4,7 @@ export function TwitterXIcon() {
       <a
         style={{ padding: "0.5rem" }}
         target="_blank"
-        href="https://twitter.com/bettercallgopal"
+        href="https://twitter.com/farunurisonmez"
         aria-label="CodeDeployingSquad twitter"
         rel="nofollow noreferrer"
       >

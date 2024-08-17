@@ -42,7 +42,7 @@ export const CTA = () => {
   return (
     <motion.button
       data-cal-namespace=""
-      data-cal-link="bettercallgopal/15min"
+      data-cal-link="farunurisonmez/15min"
       data-cal-config='{"layout":"month_view"}'
       style={{
         border,
