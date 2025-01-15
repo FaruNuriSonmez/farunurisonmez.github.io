@@ -1,33 +1,324 @@
 ---
-title: About me
-description: A letter to the viewer
+title: Hakkımda
+description: İzleyiciye bir mektup
 ---
+
 import Image from "next/image";
 
+export const AboutPage = () => (
+  <main className="relative lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6">
+    <div>
+      <section className="relative grid lg:grid-cols-custom grid-cols-1 gap-x-6 justify-items-center">
+        <div className="order-2 lg:order-none">
+          <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
+            Merhaba, ben Faru Sönmez. Türkiye'de yaşayan bir Teknoloji Direktörü ve Yazılım Geliştiricisiyim.
+          </h1>
+          
+          <div className="space-y-6 text-base text-zinc-600 dark:text-zinc-400">
+            <p>
+              Yazılım geliştirme ve teknoloji liderliği konularında geniş deneyime sahibim.
+              Web, mobil, blok zinciri ve sürükleyici teknolojilerde yenilikçi çözümler üretme konusunda uzmanım.
+            </p>
+            
+            <p>
+              Şu anda Kayra Export'ta Teknoloji Direktörü olarak görev yapıyorum ve teknoloji stratejisi ile uygulamasını yönetiyorum.
+              Daha önce, ABC Lojistik'te geliştirme ekiplerini yönettim ve blok zinciri ile AR/VR alanlarında yenilikçi projelerde çalıştım.
+            </p>
 
-<main className="relative lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6">
-  <div>
-            <section className="relative grid lg:grid-cols-custom grid-cols-1 gap-x-6 justify-items-center">
-              <div className="order-2 lg:order-none">
-                <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
-                    I&apos;m. I live in , where I
-                    build the future.
-                  </h1>
-              </div>
-              <aside className="flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12">
-               <div className="sticky top-10">
-               <Image
-                      className="rounded-2xl mb-4 object-cover max-h-96 min-h-96 bg-top"
-                      src={""}
-                      width={400}
-                      height={400}
-                      quality={100}
-                      alt={""}
-                      placeholder="blur"
-                      priority
-                    />
-               </div>
-              </aside>
-              </section>
-              </div>
-</main>
+            <p>
+              Uzmanlık alanlarım, uçtan uca yazılım geliştirme, blok zinciri çözümleri, 3D render teknolojileri
+              ve Unity ile AR/VR platformlarını kullanarak sürükleyici teknoloji geliştirmeyi kapsamaktadır.
+            </p>
+          </div>
+        </div>
+      </section>
+<section className="text-zinc-600 dark:text-zinc-400">
+  <h2 className="font-incognito text-4xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-200 mb-6">
+    Deneyim
+  </h2>
+  <div className="space-y-6">
+    {/* Teknoloji Direktörü */}
+    <div className="bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+      <h3 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200 mb-2">Teknoloji Direktörü</h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 flex items-center">
+        Kayra Export Ev Teks. San. ve Tic. A.Ş. · Tam zamanlı · Ekim 2024 - Ocak 15
+        <span className="ml-2 inline-block bg-blue-500 text-white text-xs py-1 px-2 rounded-full">
+          3 ay
+        </span>
+      </p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300">Mimarsinan OSB, Melikgazi, Kayseri, Türkiye</p>
+      <ul className="list-disc list-inside space-y-2 mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <li>Teknoloji stratejisi ve uygulamasını yönetme</li>
+        <li>Kurumsal düzeyde yazılım geliştirme yönetimi</li>
+        <li>Teknik mimari ve yenilikçiliği denetleme</li>
+        <li>Yetenekler: C#, Veri Yönetimi, Ağ Oluşturma, E-ticaret, Next.js</li>
+      </ul>
+    </div>
+
+    {/* Yazılım Geliştirici - Ekip Lideri */}
+    <div className="bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+      <h3 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200 mb-2">Yazılım Geliştirici - Ekip Lideri & Proje Yöneticisi</h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 flex items-center">
+        ABC Lojistik · Tam zamanlı · Ocak 2023 - Ekim 2024
+        <span className="ml-2 inline-block bg-blue-500 text-white text-xs py-1 px-2 rounded-full">
+          1 yıl 9 ay
+        </span>
+      </p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300">Anbar, Kayseri, Türkiye</p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 mt-2">
+        ABC Lojistik Mobil ve Web Yönetim Sistemi, seferlere ait araçların sefer bittikten sonra beklemelerini takip eden,
+        firma içi departmanların işbirliğini artıran ve yönetimin araç beklemelerini analiz etmesine imkan tanıyan kapsamlı bir projedir.
+      </p>
+      <ul className="list-disc list-inside space-y-2 mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <li>Proje yönetimi ve yazılım geliştirme süreçlerinin yönetilmesi</li>
+        <li>Yazılım tasarımı ve geliştirme için liderlik sağlama</li>
+        <li>Yetenekler: C#, ASP.NET Core, SQL, Entity Framework</li>
+      </ul>
+    </div>
+
+    {/* SugAR Technology Experience */}
+    <div className="bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+      <h3 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200 mb-2">Yazılım Mühendisi - Rendering Engine Developer</h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 flex items-center">
+        SugAR Technology · Tam zamanlı · Şub 2021 - Oca 2022
+        <span className="ml-2 inline-block bg-blue-500 text-white text-xs py-1 px-2 rounded-full">
+          1 yıl
+        </span>
+      </p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300">İstanbul, Türkiye</p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 mt-2">
+        Derin Teknoloji Startupında 3D Ürün Konfigürasyonu ve Render Çözümleri Geliştirme projesinde görev aldım.
+        Unity oyun motoru kullanarak V-Ray render optimizasyonları gerçekleştirdim ve Python ile dosya çıktıları alarak
+        render süreçlerini hızlandırdım. Proje sayesinde şirketler, müşterilerine özelleştirilmiş ürün ve yaşam alanı deneyimleri sunarak satışlarını %70 oranında artırdı.
+      </p>
+      <ul className="list-disc list-inside space-y-2 mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <li>Unity oyun motoru ile 3D ürün konfigürasyonu geliştirme</li>
+        <li>V-Ray render optimizasyonları ve hızlı render süreçleri sağlama</li>
+        <li>Python kullanarak çizimlerin dosya çıktısına alınması ve render edilmesi</li>
+        <li>Yetenekler: Unity, C++, C#, Python</li>
+      </ul>
+    </div>
+
+    {/* Lindow Labs Experience */}
+    <div className="bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+      <h3 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200 mb-2">Yazılım Mühendisi - Immersive Technology Developer</h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 flex items-center">
+        Lindow Labs · Sözleşmeli · Eyl 2017 - Oca 2021
+        <span className="ml-2 inline-block bg-blue-500 text-white text-xs py-1 px-2 rounded-full">
+          3 yıl 5 ay
+        </span>
+      </p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300">Plymouth, İngiltere</p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 mt-2">
+        Sürükleyici Teknoloji Hizmetleri alanında 3 farklı Artırılmış Gerçeklik projesinde baş mühendis olarak görev aldım.
+        Bu projelerle, kullanıcı etkileşimlerini geliştirmek ve daha gerçekçi deneyimler sunmak için yenilikçi AR teknolojileri geliştirdim.
+      </p>
+      <ul className="list-disc list-inside space-y-2 mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <li>Artırılmış Gerçeklik projelerinde baş mühendis olarak liderlik yapma</li>
+        <li>Yenilikçi AR teknolojileri geliştirme ve uygulama</li>
+        <li>Yetenekler: C++</li>
+      </ul>
+    </div>
+
+    {/* Felixart Studios Experience */}
+    <div className="bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+      <h3 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200 mb-2">Yazılım Mühendisi - Immersive Technology Developer</h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 flex items-center">
+        feliXart Studios · Tam zamanlı · Eyl 2016 - Eyl 2017
+        <span className="ml-2 inline-block bg-blue-500 text-white text-xs py-1 px-2 rounded-full">
+          1 yıl 1 ay
+        </span>
+      </p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300">Kayseri, Türkiye</p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 mt-2">
+        Sanal Gerçeklik ve Artırılmış Gerçeklik projelerinde baş mühendis olarak görev aldım. Bu projelerde, VR ve AR teknolojilerini kullanarak
+        etkileşimli ve sürükleyici deneyimler geliştirdim.
+      </p>
+      <ul className="list-disc list-inside space-y-2 mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <li>Sanal Gerçeklik ve Artırılmış Gerçeklik projelerinde baş mühendis olarak görev alma</li>
+        <li>Yenilikçi VR ve AR projeleri geliştirme</li>
+        <li>Yetenekler: Unity, C++, C#</li>
+      </ul>
+    </div>
+
+    {/* Ünlem Bilişim Teknolojileri A.Ş. Experience */}
+    <div className="bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+      <h3 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200 mb-2">Yazılım Mühendisi - Mobile App Developer (Stajyer)</h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 flex items-center">
+        Ünlem Bilişim Teknolojileri A.Ş. · Stajyer · 2015 - 2016
+        <span className="ml-2 inline-block bg-blue-500 text-white text-xs py-1 px-2 rounded-full">
+          1 yıl
+        </span>
+      </p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300">Kayseri, Türkiye</p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-300 mt-2">
+        Mobil Teknoloji Hizmetleri alanında stajyer olarak görev aldım ve mobil uygulama geliştirme süreçlerinde yer aldım.
+      </p>
+      <ul className="list-disc list-inside space-y-2 mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <li>Mobil uygulama geliştirme süreçlerinde deneyim kazanma</li>
+        <li>Yetenekler: Java, Android Studio</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      
+<section className="space-y-12">
+  <h2 className="font-incognito text-3xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-200 pb-6">
+    Eğitim
+  </h2>
+
+  <div className="space-y-8">
+    {/* Yüksek Lisans Eğitimi */}
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        Yüksek Lisans (Master), Bilgisayar Mühendisliği
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Karabük Üniversitesi
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Eyl 2020 - Kas 2021 · Karabük, Türkiye</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Teknoloji, insan ve sistem yönetimini bir araya getiren bilgi sistemlerinin tasarımı ve geliştirilmesi üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+    {/* Lisans Eğitimi */}
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        Lisans Derecesi, Yönetim Bilişim Sistemleri
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Anadolu Üniversitesi
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">2017 - 2020 · Eskişehir, Türkiye</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Bilgi Teknolojisi Mühendisi olarak mezun oldum.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section className="space-y-12">
+  <h2 className="font-incognito text-3xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-200 pb-6">
+    Sertifikalar
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    {/* Yönetim Sertifikaları */}
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        Agile Development Day
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Coderspace
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Mayıs 2024 - Mayıs 2034</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Proje Yönetimi üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        Tech & Dev Talks 2024
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Coderspace
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Mayıs 2024</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Teknoloji ve Yazılım geliştirme üzerine konuşmalar ve seminerler.</li>
+      </ul>
+    </div>
+
+    {/* Veritabanı Sertifikaları */}
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        MongoDB CRUD Operations: Modifying Query Results
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ MongoDB
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Mart 2024 - Mart 2034</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Veritabanı sorgularını değiştirme ve yönetme üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        MongoDB Indexes
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ MongoDB
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Mart 2024 - Mart 2034</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>MongoDB üzerinde indeks oluşturma ve yönetme üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+    {/* Yazılım Sertifikaları */}
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        Elasticsearch | Net Core
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Udemy
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Eylül 2024 - Ekim 2034</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Elasticsearch ve .Net Core entegrasyonu üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        Git ve GitHub Eğitimi
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Techcareer.net
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Temmuz 2024 - Temmuz 2034</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Git ve GitHub üzerinde sürüm kontrolü ve yönetimi üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        React & TypeScript Masterclass
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Udemy
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Eylül 2024 - Eylül 2034</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>React ve TypeScript ile modern web uygulamaları geliştirme üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+    <div className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      <h3 className="font-semibold text-xl text-zinc-800 dark:text-zinc-200 mb-2">
+        Web3 & Ether.js Masterclass
+        <span className="text-sm font-normal text-zinc-600 dark:text-zinc-400 ml-2">
+          @ Udemy
+        </span>
+      </h3>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">Eylül 2024 - Eylül 2034</p>
+      <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+        <li>Web3 ve Ether.js ile blockchain tabanlı uygulamalar geliştirme üzerine eğitim aldım.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+    </div>
+  </main>
+);
+
+<AboutPage />
